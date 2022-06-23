@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+/* Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%) */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: hsl(0, 0%, 95%);
+  margin-bottom: 16px;
+
+  display: flex;
+}
+.card {
+  width: 300px;
+  padding: 48px;
+}
+.card--one {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: hsl(31, 77%, 52%);
+}
+.card--two {
+  background-color: hsl(184, 100%, 22%);
+}
+.card--three {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: hsl(179, 100%, 13%);
+}
+.card__icon {
+  margin-bottom: 24px;
+}
+.card__title {
+  font-size: 42px;
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: hsl(0, 0%, 95%);
+}
+.card__text {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.6;
+  margin-bottom: 72px;
+}
+.card__button {
+  border: none;
+  font-weight: bold;
+  padding: 16px 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 95%);
+}
+.card__button:hover,
+.card__button:focus {
+  outline: 2px solid hsl(0, 0%, 95%);
+  background-color: inherit;
+  outline-offset: -2px;
+}
+.card--one .card__button {
+  color: hsl(31, 77%, 52%);
+}
+.card--two .card__button {
+  color: hsl(184, 100%, 22%);
+}
+.card--three .card__button {
+  color: hsl(179, 100%, 13%);
+}
+.card--one .card__button:hover,
+.card--one .card__button:focus {
+  color: hsl(0, 0%, 95%);
+}
+.card--two .card__button:hover,
+.card--two .card__button:focus {
+  color: hsl(0, 0%, 95%);
+}
+.card--three .card__button:hover,
+.card--three .card__button:focus {
+  color: hsl(0, 0%, 95%);
+}
+
+/* Mobile responsive media query */
+@media (max-width: 768px) {
+  body {
+    align-items: unset;
+    justify-content: unset;
+  }
+  .container {
+    margin: 16px auto;
+    flex-direction: column;
+  }
+  .card--one {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+  .card--three {
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
