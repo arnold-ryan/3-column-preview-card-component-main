@@ -93,11 +93,17 @@ body {
 .card--three .card__button:focus {
   color: hsl(0, 0%, 95%);
 }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 /* Mobile responsive media query */
 @media (max-width: 768px) {
   body {
-    align-items: unset;
     justify-content: unset;
   }
   .container {
@@ -112,12 +118,7 @@ body {
     border-bottom-left-radius: 8px;
     border-top-right-radius: 0;
   }
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  .attribution {
+    font-size: 9px;
+  }
 }
